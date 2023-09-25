@@ -22,7 +22,7 @@ CREATE TABLE transacoes (
   valor INTEGER NOT NULL,
   data DATE DEFAULT NOW(),
   categoria_id INTEGER NOT NULL REFERENCES categorias(id),
-  usuario_id INTEGER NOT NULL REFERENCES usuario(id),
+  usuario_id INTEGER NOT NULL REFERENCES usuarios(id),
   tipo VARCHAR(255) NOT NULL CHECK (tipo IN ('entrada', 'saida'))
 );
 
@@ -33,7 +33,7 @@ CREATE TABLE categorias (
 );
 
 -- Inserir os valores de categorias
-INSERT INTO categorias (nome) VALUES
+INSERT INTO categorias (descricao) VALUES
 ('Alimentação'),
 ('Assinaturas e Serviços'),
 ('Casa'),

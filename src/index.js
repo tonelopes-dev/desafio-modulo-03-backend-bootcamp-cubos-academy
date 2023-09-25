@@ -1,7 +1,8 @@
 const express = require('express');
+const rotas = require('./rotas');
 const app = express();
 const PORT = 3000;
 
 app.use(express.json());
-
-app.listen(`Online na porta: ${PORT}`);
+app.use(rotas);
+app.listen(PORT);
