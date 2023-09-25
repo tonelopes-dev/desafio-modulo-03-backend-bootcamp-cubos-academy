@@ -37,8 +37,9 @@ const loginUsuario = async (req, res) => {
 
     return res.json({ usuario: usuarioLogado, token });
   } catch (error) {
-    console.error(error);
-    return res.status(500).json({ message: 'Error interno do Servidor' });
+    return res
+      .status(500)
+      .json({ message: 'Error interno do Servidor', error: err.message });
   }
 };
 module.exports = loginUsuario;

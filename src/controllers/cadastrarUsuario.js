@@ -1,13 +1,11 @@
 const pool = require('../conexao');
 const bcrypt = require('bcrypt');
+const validacaoUsuario = require('../utils/validacaoUsuario');
 const cadastrarUsuario = async (req, res) => {
   const { nome, email, senha } = req.body;
 
-  if (!nome || !email || !senha) {
-    return res
-      .status(400)
-      .json({ mensagem: 'Todos os campos são obrigatórios.' });
-  }
+  validacaoUsuario(nome, email, senha);
+
   try {
     // Buscando usuário no BD
     const usuario = await pool.query(
@@ -34,7 +32,9 @@ const cadastrarUsuario = async (req, res) => {
 
     return res.status(201).json(novoUsuario.rows[0]);
   } catch (error) {
-    return res.status(500).json({ message: 'Error interno do Servidor' });
+    return res
+      .status(500)
+      .json({ message: 'Error interno do Servidor', error: err.message });
   }
 };
 
