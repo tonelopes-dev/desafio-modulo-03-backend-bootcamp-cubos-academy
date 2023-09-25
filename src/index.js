@@ -4,4 +4,4 @@ const PORT = 3000;
 
 app.use(express.json());
 
-app.listen(PORT);
+app.listen(`Online na porta: ${PORT}`);
