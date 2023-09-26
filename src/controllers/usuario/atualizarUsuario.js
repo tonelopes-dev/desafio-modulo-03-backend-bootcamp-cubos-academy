@@ -1,5 +1,5 @@
-const pool = require('../conexao');
-const validacaoUsuario = require('../utils/validacaoUsuario');
+const pool = require('../../conexao');
+const validacaoUsuario = require('../../utils/validacaoUsuario');
 const bcrypt = require('bcrypt');
 
 const atualizarUsuario = async (req, res) => {
