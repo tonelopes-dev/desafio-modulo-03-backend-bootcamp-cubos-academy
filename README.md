@@ -4,6 +4,8 @@
 
 Este projeto foi desenvolvido como parte do Desafio do Módulo 3 durante o bootcamp da Cubos Academy. O objetivo era construir uma RESTful API capaz de gerenciar transações financeiras de usuários. A API permite o cadastro de usuários, login, detalhamento e edição de perfil, categorias, transações, entre outras funcionalidades.
 
+[Instruções do Projeto](./src/README.md)
+
 ## Estrutura do Projeto
 
 O projeto possui uma estrutura organizada com arquivos específicos para diferentes responsabilidades:
