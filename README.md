@@ -13,8 +13,10 @@ O projeto possui uma estrutura organizada com arquivos específicos para diferen
 - **rotas.js:** Definição das rotas da API.
 - **controladores/:** Pasta contendo os controladores para cada rota.
 - **sql/:** Pasta contendo scripts SQL para criação do banco de dados e inserção de categorias.
-  Banco de Dados
-  Foi utilizado o banco de dados PostgreSQL com um esquema chamado dindin. O esquema contém três tabelas:
+
+## Banco de Dados
+
+Foi utilizado o banco de dados PostgreSQL com um esquema chamado dindin. O esquema contém três tabelas:
 
 - **usuarios:** Armazena informações dos usuários, como nome, e-mail e senha.
 - **categorias:** Contém as categorias pré-cadastradas para as transações.
@@ -24,7 +26,8 @@ O projeto possui uma estrutura organizada com arquivos específicos para diferen
 
 ### A API implementa as seguintes funcionalidades:
 
-**Cadastro de Usuário (POST /usuario):** Permite o cadastro de novos usuários com validação de campos obrigatórios, e-mail único e criptografia de senha.
+**Cadastro de Usuário (POST /usuario):**
+Permite o cadastro de novos usuários com validação de campos obrigatórios, e-mail único e criptografia de senha.
 
 **Login (POST /login):** Possibilita o login de usuários, gerando um token de autenticação.
 
@@ -46,18 +49,18 @@ O projeto possui uma estrutura organizada com arquivos específicos para diferen
 
 **Extrato de Transações (GET /transacao/extrato):** Retorna o extrato das transações do usuário logado, com a soma das transações de entrada e saída.
 
-### Status Codes
+## Status Codes
 
 A API utiliza códigos de status HTTP para indicar o resultado de cada requisição, garantindo uma comunicação clara entre o cliente e o servidor. Os principais códigos utilizados são:
 
-**200 (OK):** Requisição bem-sucedida.
-**201 (Created):** Recurso criado com sucesso.
-**204 (No Content):** Requisição bem-sucedida, sem conteúdo no corpo da resposta.
-**400 (Bad Request):** Erro na requisição devido a sintaxe/formato inválido.
-**401 (Unauthorized):** Usuário não autenticado.
-**403 (Forbidden):** Usuário não tem permissão para acessar o recurso solicitado.
-**404 (Not Found):** Recurso não encontrado.
+- **200 (OK):** Requisição bem-sucedida.
+- **201 (Created):** Recurso criado com sucesso.
+- **204 (No Content):** Requisição bem-sucedida, sem conteúdo no corpo da resposta.
+- **400 (Bad Request):** Erro na requisição devido a sintaxe/formato inválido.
+- **401 (Unauthorized):** Usuário não autenticado.
+- **403 (Forbidden):** Usuário não tem permissão para acessar o recurso solicitado.
+- **404 (Not Found):** Recurso não encontrado.
 
-### Considerações Finais
+## Considerações Finais
 
 O projeto atende aos requisitos obrigatórios, garantindo a segurança das operações e o correto armazenamento das informações no banco de dados. A estrutura modular facilita a manutenção e expansão da API. O README fornece uma visão geral das funcionalidades e da estrutura do projeto, permitindo que outros desenvolvedores entendam e contribuam para o código.
